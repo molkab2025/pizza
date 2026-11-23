@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap');
+
+:root {
+    --black: #11110f;
+    --cream: #f1eee6;
+    --gold: #c8a96b;
+    --muted: #99958b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--black);
+    color: var(--cream);
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* NAVBAR */
+
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 7%;
+}
+
+.logo {
+    color: white;
+    font-size: 19px;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+.navbar nav {
+    display: flex;
+    gap: 35px;
+}
+
+.navbar nav a {
+    color: #d0cec7;
+    text-decoration: none;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: var(--gold);
+}
+
+.nav-button {
+    text-decoration: none;
+    color: var(--cream);
+    border: 1px solid rgba(255,255,255,0.35);
+    padding: 12px 20px;
+    font-size: 11px;
+    transition: 0.3s;
+}
+
+.nav-button:hover {
+    background: var(--cream);
+    color: var(--black);
+}
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 9%;
+    background-image: url('https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=2000&q=90');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(10,10,9,0.95) 0%,
+        rgba(10,10,9,0.65) 50%,
+        rgba(10,10,9,0.15) 100%
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(65px, 9vw, 125px);
+    font-weight: 400;
+    line-height: 0.98;
+}
+
+.hero h1 span,
+.intro h2 span,
+.menu-heading h2 span,
+.closing h2 span {
+    color: var(--gold);
+    font-style: italic;
+}
+
+.hero-description {
+    max-width: 390px;
+    color: #c2bfb7;
+    line-height: 1.8;
+    font-size: 14px;
+    margin-top: 25px;
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 17px 25px;
+    border: 1px solid rgba(255,255,255,0.4);
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 10px;
+    transition: 0.4s;
+}
+
+.hero-button:hover {
+    background: var(--cream);
+    color: var(--black);
+}
+
+.hero-bottom {
+    position: absolute;
+    bottom: 35px;
+    left: 9%;
+    right: 9%;
+    display: flex;
+    justify-content: space-between;
+    color: #c0bdb5;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+/* INTRO */
+
+.intro {
+    text-align: center;
+    padding: 130px 20px;
+}
+
+.intro h2,
+.menu-heading h2,
+.closing h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(40px, 5vw, 70px);
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+.intro-text {
+    max-width: 450px;
+    margin: 30px auto 0;
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+/* MENU */
+
+.menu-section {
+    padding: 50px 8% 120px;
+}
+
+.menu-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 45px;
+}
+
+.text-link {
+    color: var(--cream);
+    text-decoration: none;
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.menu-card {
+    cursor: pointer;
+}
+
+.food-image {
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.6s, filter 0.6s;
+}
+
+.menu-card:hover .food-image {
+    transform: scale(1.025);
+    filter: brightness(1.12);
+}
+
+.menu-card {
+    overflow: hidden;
+}
+
+.pizza-one {
+    background-image: url('https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=900&q=85');
+}
+
+.pizza-two {
+    background-image: url('https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=85');
+}
+
+.pizza-three {
+    background-image: url('https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&w=900&q=85');
+}
+
+.menu-info {
+    padding: 22px 0;
+}
+
+.menu-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.menu-info p {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+/* CLOSING */
+
+.closing {
+    text-align: center;
+    padding: 130px 20px;
+    background: #191815;
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 8%;
+    color: var(--muted);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+/* ANIMATIONS */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 25px 5%;
+    }
+
+    .navbar nav {
+        gap: 15px;
+    }
+
+    .navbar nav a {
+        font-size: 10px;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .hero {
+        padding: 0 6%;
+    }
+
+    .hero h1 {
+        font-size: 75px;
+    }
+
+    .hero-bottom {
+        left: 6%;
+        right: 6%;
+        font-size: 8px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .food-image {
+        height: 350px;
+    }
+
+    .menu-heading {
+        gap: 20px;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    footer {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+}
